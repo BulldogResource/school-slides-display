@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Slides Display</title>
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #000;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<iframe
+    id="slides"
+    allowfullscreen>
+</iframe>
+
+<script>
+    const slidesUrl =
+        "https://docs.google.com/presentation/d/e/2PACX-1vTJwnciNC7kSSkyqr5z5x7gcoCob7J6twpltR9q9bWv6Q69ai1Tm9ceyogMdNKh8s7oYIl2O3L71vxK/pub?start=true&loop=true&delayms=10000";
+
+    const slides = document.getElementById("slides");
+
+    function loadSlides() {
+        slides.src = slidesUrl + "&refresh=" + Date.now();
+    }
+
+    // Load the presentation immediately.
+    loadSlides();
+
+    // Refresh the presentation every 5 minutes.
+    setInterval(loadSlides, 5 * 60 * 1000);
+</script>
+
+</body>
+</html>
