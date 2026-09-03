@@ -33,7 +33,7 @@
 
 <script>
     const slidesUrl =
-        "https://docs.google.com/presentation/d/e/2PACX-1vTJwnciNC7kSSkyqr5z5x7gcoCob7J6twpltR9q9bWv6Q69ai1Tm9ceyogMdNKh8s7oYIl2O3L71vxK/embed?start=true&loop=true&delayms=10000";
+        "https://docs.google.com/presentation/d/e/2PACX-1vTJwnciNC7kSSkyqr5z5x7gcoCob7J6twpltR9q9bWv6Q69ai1Tm9ceyogMdNKh8s7oYIl2O3L71vxK/embed?start=true&loop=true&delayms=30000";
 
     const slides = document.getElementById("slides");
 
@@ -45,7 +45,7 @@
     loadSlides();
 
     // Refresh the presentation every 5 minutes.
-    setInterval(loadSlides, 30 * 1000);
+    setInterval(loadSlides, 5 * 60 * 1000);
 </script>
 
 </body>
